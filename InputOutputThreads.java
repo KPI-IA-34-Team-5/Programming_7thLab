@@ -37,16 +37,15 @@ public class InputOutputThreads {
         public void run() {
             try {
                 String fileName = filePath.split("\\\\")[filePath.split("\\\\").length - 1];
-                rarestWord(filePath);
                 synchronized (wordOccurrences) {
-                    System.out.println("Rarest word in file " + fileName + ": " + Collections.min(wordOccurrences.entrySet(), Map.Entry.comparingByValue()).getKey());
+                    System.out.println("Rarest word in file " + fileName + ": " + rarestWord(filePath));
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        private void rarestWord(String filePath) throws IOException {
+        private String rarestWord(String filePath) throws IOException {
             try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
@@ -59,6 +58,7 @@ public class InputOutputThreads {
                         }
                     }
                 }
+                return Collections.min(wordOccurrences.entrySet(), Map.Entry.comparingByValue()).getKey();
             }
         }
     }

@@ -9,9 +9,9 @@ public class IOTTime {
     public static void main(String[] args) throws IOException, InterruptedException {
         String[] filePaths = {
                 "C:\\Users\\user\\Desktop\\кпи\\1 курс\\2 семестр\\програмування лаби\\lab5\\io-rarest-word\\src\\file.txt",
-                "C:\\Users\\user\\Desktop\\fa.txt",
-                "C:\\Users\\user\\Desktop\\оапр.txt",
-                "C:\\Users\\user\\Desktop\\dfg.txt"
+                "C:\\Users\\user\\Desktop\\кпи\\1 курс\\2 семестр\\програмування лаби\\lab5\\io-rarest-word\\src\\fa.txt",
+                "C:\\Users\\user\\Desktop\\кпи\\1 курс\\2 семестр\\програмування лаби\\lab5\\io-rarest-word\\src\\оапр.txt",
+                "C:\\Users\\user\\Desktop\\кпи\\1 курс\\2 семестр\\програмування лаби\\lab5\\io-rarest-word\\src\\dfg.txt"
         };
 
         for (String filePath : filePaths) {
